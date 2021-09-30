@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const rutasMediciones = require('./rutas/mediciones.rutas');
 const app = express()
 const port = 3500
 
@@ -6,11 +7,14 @@ const port = 3500
 app.set("name", "Api-rest-bm");
 app.set("port", process.env.port || port ); // Si el servidor asigna un purto se queda, sino le ponemos 3500
 app.use( express.json()) // Nos permite recibir json por http
+app.use("/api", rutasMediciones);
 
 // Ruta raiz ********************************************************************
 app.get('/', (req, res) => {
   res.send('Api Proyecto AusiasBM!')
 })
+
+
 
 // Configuración del servdor antes de lanzarlo **********************************
 app.listen(app.get("port"), () => {
