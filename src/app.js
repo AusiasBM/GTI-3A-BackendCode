@@ -10,10 +10,10 @@ app.use( express.json()) // Nos permite recibir json por http
 app.use("/api", rutasMediciones); // Enlazamos las rutas con la app
 
 // Ruta raiz ********************************************************************
-app.get('/', (req, res) => {
-  res.send('Api Proyecto AusiasBM!')
-})
-
+// app.get('/', (req, res) => {
+//   res.send('Api Proyecto AusiasBM!')
+// })
+app.use(express.static("public"));
 
 
 // Configuración del servdor antes de lanzarlo **********************************
