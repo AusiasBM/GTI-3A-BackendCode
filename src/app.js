@@ -1,7 +1,11 @@
 const express = require('express');
+const conexionDB = require("./db.conexion");
 const rutasMediciones = require('./rutas/mediciones.rutas');
 const app = express()
 const port = 3500
+
+// conexión *********************************************************************
+conexionDB();
 
 // Configuraciones **************************************************************
 app.set("name", "Api-rest-bm");
