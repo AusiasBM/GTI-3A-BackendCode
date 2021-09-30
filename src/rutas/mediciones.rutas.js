@@ -10,7 +10,7 @@ rutasMediciones.get('/todas-las-mediciones', (req, res) => {
             "fecha"         : "29-09-2021",
             "hora"          : "12:15",
             "lat"           : "38.99600901262704",
-            "long"          : "-0.16582290057630056",
+            "lng"          : "-0.16582290057630056"
         },
         {
             "medicion"      : "2.0",
@@ -18,10 +18,22 @@ rutasMediciones.get('/todas-las-mediciones', (req, res) => {
             "fecha"         : "30-09-2021",
             "hora"          : "09:00",
             "lat"           : "38.99600901262704",
-            "long"          : "-0.16582290057630056",
+            "lng"          : "-0.16582290057630056"
         },
     ]
     res.json(mediciones);
+});
+
+rutasMediciones.post('/anyadir-medicion', ( req, res ) => {
+
+    // Si creamos una lista con el mismo nombre que las clables del json, se añaden los valores automáticamente a cada varaible.
+    const { medicion, tipoMedicion, fecha, hora, lat, lng } = req.body;
+    console.log(medicion + ", " + tipoMedicion + ", " + fecha);
+    
+    res.json({
+        msj: "Medición recibida"
+    });
+
 });
 
 

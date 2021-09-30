@@ -7,7 +7,7 @@ const port = 3500
 app.set("name", "Api-rest-bm");
 app.set("port", process.env.port || port ); // Si el servidor asigna un purto se queda, sino le ponemos 3500
 app.use( express.json()) // Nos permite recibir json por http
-app.use("/api", rutasMediciones);
+app.use("/api", rutasMediciones); // Enlazamos las rutas con la app
 
 // Ruta raiz ********************************************************************
 app.get('/', (req, res) => {
