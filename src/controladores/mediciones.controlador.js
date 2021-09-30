@@ -4,16 +4,14 @@ exports.obtenerTodas = (req, res) => {
         {
             "medicion"      : "2.5",
             "tipoMedicion"  : "Calidad del aire",
-            "fecha"         : "29-09-2021",
-            "hora"          : "12:15",
+            "fechaHora"         : "29-09-2021",
             "lat"           : "38.99600901262704",
             "lng"          : "-0.16582290057630056"
         },
         {
             "medicion"      : "2.0",
             "tipoMedicion"  : "Calidad del aire",
-            "fecha"         : "30-09-2021",
-            "hora"          : "09:00",
+            "fechaHora"         : "30-09-2021",
             "lat"           : "38.99600901262704",
             "lng"          : "-0.16582290057630056"
         },
