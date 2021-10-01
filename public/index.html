@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Sprint 0 - AusiasBM</title>
 </head>
 <body>
-    <div class="">
-        <h1>MEDICIONES</h1>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <p>Duis excepteur tempor fugiat cillum consectetur laboris adipisicing officia. Laborum nulla ullamco qui irure duis cillum dolor velit nisi. Mollit aute Lorem nulla aliqua. Eiusmod adipisicing commodo ipsum ex id officia deserunt do sit velit dolore.</p>
-            <p>Duis excepteur tempor fugiat cillum consectetur laboris adipisicing officia. Laborum nulla ullamco qui irure duis cillum dolor velit nisi. Mollit aute Lorem nulla aliqua. Eiusmod adipisicing commodo ipsum ex id officia deserunt do sit velit dolore.</p>
+
+    <section class="container d-flex flex-column justify-content-center">
+        
+        <h3 class="text-center m-5">Sprint 0 - Proyecto 3A<br> Ausias Bañuls Mahiques</h1>
+
+        <div class="text-center mb-5">
+            <button type="button" class="btn btn-primary" onclick="todasLasMedidiones()">Listar Mediciones</button>
         </div>
-    </div>
+
+
+        
+        <div class="text-center" id="listaMedicionesEnHtml"></div>     
+
+    </section>
+
+    <script src="js/funcionesApi.js"></script>
 </body>
 </html>
