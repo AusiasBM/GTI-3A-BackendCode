@@ -24,12 +24,14 @@ const MedicionSchema = new Schema ({
         required: false
     },
     lat : {
-        type: String,
-        required: true
+        type: Schema.Types.Decimal128,
+        required: true,
+        get: med,
     },
     lng: {
-        type: String,
-        required: true
+        type: Schema.Types.Decimal128,
+        required: true,
+        get: med,
     }
 
 });

@@ -1,6 +1,8 @@
 
 const IP_PUERTO="http://localhost:3500"
 
+peticionGet = 0;
+
 function todasLasMedidiones(){
 
     fetch(IP_PUERTO + '/api/todas-las-mediciones', {
@@ -18,6 +20,12 @@ function todasLasMedidiones(){
         
         listaRespJson = res;
         num = 0;
+
+        if(peticionGet != 0){
+            document.getElementById('listaMedicionesEnHtml').innerHTML = ``;
+        }else{
+            peticionGet++;
+        }
 
         listaRespJson.forEach(element => {
 
