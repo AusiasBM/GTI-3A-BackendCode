@@ -10,9 +10,10 @@ const MedicionSchema = new Schema ({
         type: String,
         default: "Calidad del aire"
     },
-    fechaHora: {
+    fecha: {
         type: Date,
-        required: true
+        default: Date.now() + 2*60*60*1000, // al sumar 2, estamos ajustando la hora de españa
+        required: false
     },
     lat : {
         type: String,
@@ -25,4 +26,4 @@ const MedicionSchema = new Schema ({
 
 });
 
-module.exports = model ( "Estudiante", EstudianteSchema );
+module.exports = model ( "Medicion", MedicionSchema );
