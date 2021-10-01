@@ -21,7 +21,6 @@ function todasLasMedidiones(){
 
         listaRespJson.forEach(element => {
 
-            let medicion = Number.parseFloat(element.medicion.numberDecimal);
 
             document.getElementById('listaMedicionesEnHtml').innerHTML += `
 
@@ -30,7 +29,7 @@ function todasLasMedidiones(){
                     <div class="card-body">
                         <h4 class="card-title">Id: ${element._id}</h4>
                         <p> 
-                            Medicion = ${medicion}
+                            Medicion = ${element.medicion}
                             <br>
                             Tipo de medición = ${element.tipoMedicion}
                             <br>

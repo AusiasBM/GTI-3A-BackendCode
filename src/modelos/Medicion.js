@@ -1,10 +1,18 @@
 const { Schema, model, Mongoose } = require("mongoose");
 
+// Get del atributo medición, gracias a este get en el json muestra la medición como string,
+// y no como Decimal128.
+function med (val) {
+    if (!val) return val;
+    return val.toString();
+  }
+
 const MedicionSchema = new Schema ({
 
     medicion : {
         type: Schema.Types.Decimal128,
         required: true,
+        get: med,
     },
     tipoMedicion : {
         type: String,
@@ -25,5 +33,7 @@ const MedicionSchema = new Schema ({
     }
 
 });
+
+MedicionSchema.set('toJSON', { getters: true, virtuals: false });
 
 module.exports = model ( "Medicion", MedicionSchema );
