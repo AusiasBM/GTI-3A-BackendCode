@@ -1,22 +1,13 @@
 
 const Medicion = require("../modelos/Medicion");
 
-exports.obtenerTodas = (req, res) => {
-    const mediciones = [
-        {
-            "medicion"      : "2.5",
-            "tipoMedicion"  : "Calidad del aire",
-            "lat"           : "38.99600901262704",
-            "lng"          : "-0.16582290057630056"
-        },
-        {
-            "medicion"      : "2.0",
-            "tipoMedicion"  : "Calidad del aire",
-            "lat"           : "38.99600901262704",
-            "lng"          : "-0.16582290057630056"
-        },
-    ]
-    res.json(mediciones);
+exports.obtenerTodas = async (req, res) => {
+    try {
+        const mediciones = await Medicion.find();
+        res.json(mediciones);
+      } catch (error) {
+        res.json(error);
+      }
 }
 
 exports.insertarMedicion = async ( req, res ) => {
