@@ -1,5 +1,5 @@
 
-const IP_PUERTO="http://localhost:3500"
+const IP_PUERTO="http://127.0.0.1:3500"
 
 peticionGet = 0;
 

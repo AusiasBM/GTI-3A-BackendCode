@@ -1,10 +1,12 @@
 
+const { json } = require("express");
 const Medicion = require("../modelos/Medicion");
 
 exports.obtenerTodas = async (req, res) => {
     try {
         const mediciones = await Medicion.find();
-        res.json(mediciones);
+        console.log("hecho");
+        res.json(mediciones) ;
       } catch (error) {
         res.json(error);
       }
