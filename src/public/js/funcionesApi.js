@@ -3,7 +3,7 @@ const IP_PUERTO="http://localhost:3500"
 
 peticionGet = 0;
 
-function todasLasMedidiones(){
+function obtenerTodasLasMediciones(){
 
     fetch(IP_PUERTO + '/api/todas-las-mediciones', {
         method : 'get',

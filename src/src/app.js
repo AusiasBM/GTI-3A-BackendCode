@@ -1,6 +1,6 @@
 const express = require('express');
 const conexionDB = require("./db.conexion");
-const rutasMediciones = require('./rutas/mediciones.rutas');
+const rutasMediciones = require('./rutas/logicaDelNegocioFake');
 const app = express()
 const port = 3500
 

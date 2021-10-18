@@ -2,7 +2,7 @@
 const { json } = require("express");
 const Medicion = require("../modelos/Medicion");
 
-exports.obtenerTodas = async (req, res) => {
+exports.obtenerTodasLasMediciones = async (req, res) => {
     try {
         const mediciones = await Medicion.find();
         console.log("hecho");
@@ -12,7 +12,7 @@ exports.obtenerTodas = async (req, res) => {
       }
 }
 
-exports.insertarMedicion = async ( req, res ) => {
+exports.guardarMedicion = async ( req, res ) => {
 
     try {
         // Si creamos una lista con el mismo nombre que las clables del json, se añaden los valores automáticamente a cada varaible.
